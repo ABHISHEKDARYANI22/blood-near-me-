@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_receiver">
+
+
+    <fragment
+        android:id="@+id/nav_receiver"
+        android:name="com.example.bloodnearme2.ui.receiver.ReceiverFragment"
+        android:label="RECEIVER"
+        tools:layout="@layout/fragment_receiver" />
+
+    <fragment
+        android:id="@+id/nav_donor"
+        android:name="com.example.bloodnearme2.ui.donor.DonorFragment"
+        android:label="DONOR"
+        tools:layout="@layout/fragment_donor" />
+
+    <fragment
+        android:id="@+id/nav_editprofile"
+        android:name="com.example.bloodnearme2.ui.editprofile.EditprofileFragment"
+        android:label="EDIT PROFILE"
+        tools:layout="@layout/fragment_editprofile" />
+
+
+    <fragment
+        android:id="@+id/nav_logout"
+        android:name="com.example.bloodnearme2.ui.logout.LogoutFragment"
+        android:label="LOGOUT"
+        tools:layout="@layout/fragment_logout" />
+</navigation>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <androidx.legacy.widget.Space
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"></androidx.legacy.widget.Space>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal">
+
+        <androidx.legacy.widget.Space
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"></androidx.legacy.widget.Space>
+
+        <Spinner
+            android:id="@+id/spinnercity"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"></Spinner>
+
+        <androidx.legacy.widget.Space
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"></androidx.legacy.widget.Space>
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="92dp"
+            android:layout_height="wrap_content">
+
+        </Spinner>
+
+        <androidx.legacy.widget.Space
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"></androidx.legacy.widget.Space>
+
+        <Button
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13dp"
+            android:text="SEARCH"></Button>
+
+        <androidx.legacy.widget.Space
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"></androidx.legacy.widget.Space>
+    </LinearLayout>
+</LinearLayout>

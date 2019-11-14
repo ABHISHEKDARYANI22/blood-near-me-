@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "34517310036",
+    "firebase_url": "https://bloodnearme2.firebaseio.com",
+    "project_id": "bloodnearme2",
+    "storage_bucket": "bloodnearme2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:34517310036:android:3cffde0422ec324555abc1",
+        "android_client_info": {
+          "package_name": "com.example.bloodnearme2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "34517310036-7jdnc376hssgasagmg4qdgr0395funrh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bloodnearme2",
+            "certificate_hash": "15f7d9080e744622a3667807815066b64fce886e"
+          }
+        },
+        {
+          "client_id": "34517310036-f0c6999b31ag7g0fmgepd8m0mtiosjcr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAD3FDKrj5I5a-W2k3Icq-U-b2fD1kQTLE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "34517310036-f0c6999b31ag7g0fmgepd8m0mtiosjcr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

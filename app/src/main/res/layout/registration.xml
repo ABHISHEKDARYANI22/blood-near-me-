@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <androidx.legacy.widget.Space
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"></androidx.legacy.widget.Space>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="297dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif"
+        android:text="ENTER THE DETAILS"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30dp" />
+
+    <androidx.legacy.widget.Space
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"></androidx.legacy.widget.Space>
+
+
+    <EditText
+        android:id="@+id/etname"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="NAME"
+       android:layout_gravity="center"
+        android:inputType="textPersonName"
+         />
+    <androidx.legacy.widget.Space
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"></androidx.legacy.widget.Space>
+
+    <EditText
+        android:id="@+id/etemailid"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="EMAIL ID"
+        android:layout_gravity="center"
+        android:inputType="textEmailAddress" />
+    <androidx.legacy.widget.Space
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"></androidx.legacy.widget.Space>
+
+    <EditText
+        android:id="@+id/etphonenumber"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_gravity="center"
+        android:hint="PHONE NUMBER"
+        android:inputType="phone" />
+    <androidx.legacy.widget.Space
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"></androidx.legacy.widget.Space>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="45dp"
+            android:text="GENDER"></TextView>
+
+        <androidx.legacy.widget.Space
+            android:layout_width="40dp"
+            android:layout_height="match_parent"></androidx.legacy.widget.Space>
+        <RadioGroup
+            android:id="@+id/radiogroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/radiomale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="rbClick"
+                android:text="male"></RadioButton>
+
+            <RadioButton
+                android:id="@+id/radiofemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="rbClick"
+                android:text="female"></RadioButton>
+        </RadioGroup>
+    </LinearLayout>
+    <androidx.legacy.widget.Space
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"></androidx.legacy.widget.Space>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:text="DATE OF BIRTH"></TextView>
+
+        <androidx.legacy.widget.Space
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"></androidx.legacy.widget.Space>
+
+        <EditText
+            android:id="@+id/etdob"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content">
+
+        </EditText>
+    </LinearLayout>
+
+    <androidx.legacy.widget.Space
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"></androidx.legacy.widget.Space>
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="45dp">
+
+    </Spinner>
+
+    <androidx.legacy.widget.Space
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"></androidx.legacy.widget.Space>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CITY"></TextView>
+
+    <Spinner
+        android:id="@+id/spinnercity"
+        android:layout_width="137dp"
+        android:layout_height="wrap_content">
+
+    </Spinner>
+</LinearLayout>
+
+
+
+    <androidx.legacy.widget.Space
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"></androidx.legacy.widget.Space>
+    <EditText
+        android:id="@+id/etpassword"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="ENTER PASSWORD"
+        android:layout_gravity="center"/>
+    <androidx.legacy.widget.Space
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"></androidx.legacy.widget.Space>
+
+    <EditText
+        android:id="@+id/etpasswordagain"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="RE-ENTER PASSWORD"
+        android:layout_gravity="center"
+        />
+    <androidx.legacy.widget.Space
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"></androidx.legacy.widget.Space>
+
+    <Button
+        android:id="@+id/btnsignup"
+        android:layout_width="211dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimaryDark"
+        android:text="CREATE ACCOUNT" />
+
+
+
+
+</LinearLayout>
