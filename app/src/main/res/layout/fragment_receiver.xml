@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"></androidx.legacy.widget.Space>
 
         <Spinner
-            android:id="@+id/spinner"
+            android:id="@+id/spinnerbg"
             android:layout_width="92dp"
             android:layout_height="wrap_content">
 
@@ -48,4 +48,23 @@
             android:layout_width="20dp"
             android:layout_height="wrap_content"></androidx.legacy.widget.Space>
     </LinearLayout>
+    <androidx.legacy.widget.Space
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"></androidx.legacy.widget.Space>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+            <ListView
+                android:id="@+id/donorlist"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </ScrollView>
+
 </LinearLayout>

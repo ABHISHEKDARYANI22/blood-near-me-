@@ -60,19 +60,21 @@
         android:layout_height="20dp"></androidx.legacy.widget.Space>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="328dp"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="43dp"
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="90dp"
+            android:layout_width="65dp"
             android:layout_height="match_parent"
-            android:layout_marginLeft="45dp"
+
             android:text="GENDER"></TextView>
 
         <androidx.legacy.widget.Space
-            android:layout_width="40dp"
+            android:layout_width="22dp"
             android:layout_height="match_parent"></androidx.legacy.widget.Space>
+
         <RadioGroup
             android:id="@+id/radiogroup"
             android:layout_width="wrap_content"
@@ -80,7 +82,7 @@
 
             <RadioButton
                 android:id="@+id/radiomale"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="rbClick"
                 android:text="male"></RadioButton>
@@ -92,28 +94,58 @@
                 android:onClick="rbClick"
                 android:text="female"></RadioButton>
         </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="DONOR"></TextView>
+        <androidx.legacy.widget.Space
+            android:layout_width="20dp"
+            android:layout_height="wrap_content">
+
+        </androidx.legacy.widget.Space>
+        <RadioGroup
+            android:id="@+id/radiogroupdonor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/radiomaledonor"
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:onClick="rbClickdonor"
+                android:text="yes"></RadioButton>
+
+            <RadioButton
+                android:id="@+id/radiofemaledonor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="rbClickdonor"
+                android:text="no"></RadioButton>
+        </RadioGroup>
     </LinearLayout>
+
     <androidx.legacy.widget.Space
         android:layout_width="wrap_content"
         android:layout_height="20dp"></androidx.legacy.widget.Space>
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="43dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="45dp"
             android:text="DATE OF BIRTH"></TextView>
 
         <androidx.legacy.widget.Space
             android:layout_width="40dp"
-            android:layout_height="wrap_content"></androidx.legacy.widget.Space>
+            android:layout_height="match_parent"></androidx.legacy.widget.Space>
 
         <EditText
             android:id="@+id/etdob"
-            android:layout_width="180dp"
+            android:layout_width="188dp"
             android:layout_height="wrap_content">
 
         </EditText>
@@ -123,35 +155,36 @@
         android:layout_width="wrap_content"
         android:layout_height="20dp"></androidx.legacy.widget.Space>
 
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
-    <Spinner
-        android:id="@+id/spinner"
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="45dp">
+        android:layout_marginLeft="43dp"
+        android:orientation="horizontal">
 
-    </Spinner>
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="107dp"
+            android:layout_height="wrap_content">
 
-    <androidx.legacy.widget.Space
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"></androidx.legacy.widget.Space>
+        </Spinner>
+
+        <androidx.legacy.widget.Space
+            android:layout_width="10dp"
+            android:layout_height="wrap_content"></androidx.legacy.widget.Space>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="CITY"></TextView>
 
-    <Spinner
-        android:id="@+id/spinnercity"
-        android:layout_width="137dp"
-        android:layout_height="wrap_content">
+        <Spinner
+            android:id="@+id/spinnercity"
+            android:layout_width="181dp"
+            android:layout_height="wrap_content">
 
-    </Spinner>
-</LinearLayout>
-
-
+        </Spinner>
+    </LinearLayout>
 
     <androidx.legacy.widget.Space
         android:layout_width="wrap_content"
@@ -170,13 +203,12 @@
 
     <EditText
         android:id="@+id/etpasswordagain"
-        android:layout_width="330dp"
+        android:layout_width="331dp"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:hint="RE-ENTER PASSWORD"
         android:layout_gravity="center"
-        />
+        android:ems="10"
+        android:hint="RE-ENTER PASSWORD"
+        android:inputType="textPassword" />
     <androidx.legacy.widget.Space
         android:layout_width="wrap_content"
         android:layout_height="20dp"></androidx.legacy.widget.Space>

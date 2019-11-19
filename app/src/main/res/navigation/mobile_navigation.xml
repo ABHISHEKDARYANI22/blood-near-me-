@@ -8,26 +8,26 @@
 
     <fragment
         android:id="@+id/nav_receiver"
-        android:name="com.example.bloodnearme2.ui.receiver.ReceiverFragment"
+        android:name="com.example.bloodnearme2.ReceiverFragment"
         android:label="RECEIVER"
         tools:layout="@layout/fragment_receiver" />
 
     <fragment
         android:id="@+id/nav_donor"
-        android:name="com.example.bloodnearme2.ui.donor.DonorFragment"
+        android:name="com.example.bloodnearme2.DonorFragment"
         android:label="DONOR"
         tools:layout="@layout/fragment_donor" />
 
     <fragment
         android:id="@+id/nav_editprofile"
-        android:name="com.example.bloodnearme2.ui.editprofile.EditprofileFragment"
+        android:name="com.example.bloodnearme2.EditprofileFragment"
         android:label="EDIT PROFILE"
         tools:layout="@layout/fragment_editprofile" />
 
 
     <fragment
         android:id="@+id/nav_logout"
-        android:name="com.example.bloodnearme2.ui.logout.LogoutFragment"
+        android:name="com.example.bloodnearme2.LogoutFragment"
         android:label="LOGOUT"
         tools:layout="@layout/fragment_logout" />
 </navigation>

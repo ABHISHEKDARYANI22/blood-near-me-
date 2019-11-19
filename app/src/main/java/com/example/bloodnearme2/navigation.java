@@ -50,8 +50,6 @@ public class navigation extends AppCompatActivity {
         myreff = FirebaseDatabase.getInstance().getReference();
         FirebaseUser user=FirebaseAuth.getInstance().getCurrentUser();
         assert user != null;
-
-        /*DatabaseReference dbRef=FirebaseDatabase.getInstance().getReference();*/
         DatabaseReference usrRef=myreff.child("users");
         checkEmail = user.getEmail();
 
@@ -59,7 +57,8 @@ public class navigation extends AppCompatActivity {
         ValueEventListener userListener = new ValueEventListener() {
 
             @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot)
+            {
 
                 for(DataSnapshot ds : dataSnapshot.getChildren()) {
 

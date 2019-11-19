@@ -31,6 +31,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 import java.util.Calendar;
 
@@ -44,8 +46,8 @@ public class registration extends Activity implements View.OnClickListener, Adap
     private DatabaseReference databaseusers;
     private EditText etdob;
     private DatePickerDialog.OnDateSetListener mDateSetListner;
-    private RadioButton gender;
-    private RadioGroup radioGroup;
+    private RadioButton gender,donor;
+    private RadioGroup radioGroup,radioGroupdonor;
     private Spinner spinner,spinnercity;
     private String blood,city;
    @Override
@@ -53,7 +55,6 @@ public class registration extends Activity implements View.OnClickListener, Adap
         super.onCreate(savedInstanceState);
        setContentView(R.layout.registration);
        firebaseAuth = FirebaseAuth.getInstance();
-
        progressDialog = new ProgressDialog(this);
        etname = (EditText)findViewById(R.id.etname);
         etemailid = (EditText)findViewById(R.id.etemailid);
@@ -65,7 +66,7 @@ public class registration extends Activity implements View.OnClickListener, Adap
        databaseusers = FirebaseDatabase.getInstance().getReference("users");
 
        radioGroup  = (RadioGroup)findViewById(R.id.radiogroup);
-
+        radioGroupdonor  =(RadioGroup)findViewById(R.id.radiogroupdonor);
        btnSignUp.setOnClickListener(this);
        etdob.setOnClickListener(new View.OnClickListener() {
            @Override
@@ -117,13 +118,20 @@ public class registration extends Activity implements View.OnClickListener, Adap
     }
 
 
-        public void rbClick(View v) {
+        public void rbClick(View v)
+        {
             int radioid  = radioGroup.getCheckedRadioButtonId();
             //gender will tell the checked one
             gender = findViewById(radioid);
         }
+        public void rbClickdonor(View v)
+        {
+            int radioid = radioGroupdonor.getCheckedRadioButtonId();
+            //blood donor status
+            donor = findViewById(radioid);
 
 
+        }
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -146,6 +154,7 @@ public class registration extends Activity implements View.OnClickListener, Adap
        String dob  = etdob.getText().toString();
         String bloodgroup  = blood;
         String city1 = city;
+        String donordonor =  donor.getText().toString();
 
         if (TextUtils.isEmpty(emailid)) {
             Toast.makeText(this, "Please enter the Email Id", Toast.LENGTH_SHORT).show();
@@ -187,6 +196,11 @@ public class registration extends Activity implements View.OnClickListener, Adap
         if (!password.equals(passwordagain))
         {
             Toast.makeText(this, "Both passwords are not same", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if (TextUtils.isEmpty(donordonor))
+        {
+            Toast.makeText(this, "Please enter the donor preference", Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -231,8 +245,9 @@ public class registration extends Activity implements View.OnClickListener, Adap
         String dob  = etdob.getText().toString();
         String bloodgroup  = blood;
         String city2  = city;
+        String donord =  donor.getText().toString();
         String id = databaseusers.push().getKey();
-        user u = new user(id,name,emailid,phonenumber,password,dob,bloodgroup,malefemale,city2);
+        user u = new user(id,name,emailid,phonenumber,password,dob,bloodgroup,malefemale,city2,donord);
         databaseusers.child(id).setValue(u);
 
 

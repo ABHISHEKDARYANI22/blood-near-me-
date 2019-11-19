@@ -10,8 +10,10 @@ public class user {
     String bloodgroup;
     String gender;
     String city;
+    String donorstatus;
 
-    public user(String id,String name, String emailid, String phonenumber, String password,String dob,String bloodgroup,String gender,String city) {
+
+    public user(String id,String name, String emailid, String phonenumber, String password,String dob,String bloodgroup,String gender,String city,String donorstatus) {
         this.id  =id;
         this.name = name;
         this.emailid = emailid;
@@ -21,6 +23,7 @@ public class user {
        this.dob = dob;
        this.gender = gender;
        this.city  =city;
+       this.donorstatus = donorstatus;
 
     }
 
@@ -58,5 +61,13 @@ public class user {
 
     public String getCity() {
         return city;
+    }
+
+    public String getDonorstatus() {
+        return donorstatus;
+    }
+
+    public void setDonorstatus(String donorstatus) {
+        this.donorstatus = donorstatus;
     }
 }
