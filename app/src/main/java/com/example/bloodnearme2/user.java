@@ -26,6 +26,10 @@ public class user {
        this.donorstatus = donorstatus;
 
     }
+    public user()
+    {
+
+    }
 
     public String getId() {
         return id;
@@ -69,5 +73,41 @@ public class user {
 
     public void setDonorstatus(String donorstatus) {
         this.donorstatus = donorstatus;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setEmailid(String emailid) {
+        this.emailid = emailid;
+    }
+
+    public void setPhonenumber(String phonenumber) {
+        this.phonenumber = phonenumber;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public void setDob(String dob) {
+        this.dob = dob;
+    }
+
+    public void setBloodgroup(String bloodgroup) {
+        this.bloodgroup = bloodgroup;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
     }
 }

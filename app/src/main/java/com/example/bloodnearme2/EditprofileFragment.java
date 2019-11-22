@@ -30,36 +30,40 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class EditprofileFragment extends Fragment {
-    String checkEmail,uEmail,uName,uphonenumber,uspinnerbg,uspinnercity,upassword;
+    String checkEmail,uEmail,uName,uphonenumber,uspinnerbg,uspinnercity,upassword,gen,dob;
     DatePickerDialog.OnDateSetListener mDateSetListner;
     RadioButton gender;
+    String donor;
     RadioGroup radioGroup;
     Spinner spinnerbg,spinnercity;
-     EditText etnameedit,etpassword,etemailidedit,etphonenumber;
-     TextView bgname,cityname;
+     EditText etnameedit,etpassword,etphonenumber,etdob;
+     TextView tvemailid;
+     TextView bgname,cityname,tvgender;
      String bloodgroup,city;
     Button btnupdate;
     DatabaseReference myreff;
+    View v;
     FirebaseAuth firebaseAuth;
     FirebaseDatabase firebaseDatabase;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                                  ViewGroup container, Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_editprofile, null);
+         v = inflater.inflate(R.layout.fragment_editprofile, null);
 
 
 
 
          etnameedit = v.findViewById(R.id.etname);
          etpassword = v.findViewById(R.id.etpassword);
-         etemailidedit = v.findViewById(R.id.etemailid);
+         tvemailid = v.findViewById(R.id.tvemailid);
          etphonenumber = v.findViewById(R.id.etphonenumber);
          spinnerbg = v.findViewById(R.id.spinnerbgedit);
          spinnercity  =v.findViewById(R.id.spinnercityedit);
          radioGroup = v.findViewById(R.id.radiogroup);
          bgname = v.findViewById(R.id.bgname);
+         etdob = v.findViewById(R.id.etdob);
          cityname = v.findViewById(R.id.cityname);
-
+            tvgender = v.findViewById(R.id.tvgender);
 
 
         myreff = FirebaseDatabase.getInstance().getReference();
@@ -88,6 +92,8 @@ public class EditprofileFragment extends Fragment {
                         uspinnercity = ds.child("city").getValue().toString();
                         uphonenumber = ds.child("phonenumber").getValue().toString();
                         upassword = ds.child("password").getValue().toString();
+                        gen = ds.child("gender").getValue().toString();
+                        dob = ds.child("dob").getValue().toString();
                         break;
                     }
 
@@ -97,11 +103,15 @@ public class EditprofileFragment extends Fragment {
 
 
                 etnameedit.setText(uName);
-                etemailidedit.setText(uEmail);
+                tvemailid.setText(uEmail);
                 etpassword.setText(upassword);
                 etphonenumber.setText(uphonenumber);
                 bgname.setText(uspinnerbg);
                 cityname.setText(uspinnercity);
+                tvgender.setText(gen);
+                etdob.setText(dob);
+
+
                 //now for the spinner
 
 
@@ -147,7 +157,15 @@ public class EditprofileFragment extends Fragment {
                 });
             }
             @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
+            public void onCancelled(@NonNull DatabaseError databaseError)
+            {
+            }
+
+            public void rbClickdonor(View view)
+            {
+                int radioid = radioGroup.getCheckedRadioButtonId();
+                //blood donor status
+               /* donor = v.findViewById(radioid);*/
             }
         };
         usrRef.addListenerForSingleValueEvent(userListener);

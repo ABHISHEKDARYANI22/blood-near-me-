@@ -37,13 +37,14 @@
         android:layout_width="wrap_content"
         android:layout_height="20dp"></androidx.legacy.widget.Space>
 
-    <EditText
-        android:id="@+id/etemailid"
+    <TextView
+        android:id="@+id/tvemailid"
         android:layout_width="330dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="EMAIL ID"
+        android:layout_height="37dp"
         android:layout_gravity="center"
+        android:ems="10"
+        android:textSize="20dp"
+        android:hint="EMAIL ID"
         android:inputType="textEmailAddress" />
     <androidx.legacy.widget.Space
         android:layout_width="wrap_content"
@@ -72,6 +73,15 @@
             android:layout_marginLeft="45dp"
             android:text="GENDER"></TextView>
 
+        <androidx.legacy.widget.Space
+            android:layout_width="40dp"
+            android:layout_height="match_parent"></androidx.legacy.widget.Space>
+        <TextView
+            android:id="@+id/tvgender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="gender"
+            ></TextView>
         <androidx.legacy.widget.Space
             android:layout_width="40dp"
             android:layout_height="match_parent"></androidx.legacy.widget.Space>

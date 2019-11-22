@@ -221,6 +221,7 @@ public class registration extends Activity implements View.OnClickListener, Adap
                     Intent i = new Intent(registration.this,MainActivity.class);
                     startActivity(i);
                 } else {
+                    progressDialog.cancel();
                     Toast.makeText(registration.this, "Error occurred, please try again", Toast.LENGTH_SHORT).show();
 
                 }
@@ -236,7 +237,6 @@ public class registration extends Activity implements View.OnClickListener, Adap
     }
     private void adduser()
     {
-
         String name = etname.getText().toString().trim();
         String emailid  = etemailid.getText().toString().trim();
         String phonenumber = etphonenumber.getText().toString().trim();
