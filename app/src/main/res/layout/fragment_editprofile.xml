@@ -86,7 +86,7 @@
             android:layout_width="40dp"
             android:layout_height="match_parent"></androidx.legacy.widget.Space>
         <RadioGroup
-            android:id="@+id/radiogroup"
+            android:id="@+id/radiogroup12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
@@ -94,15 +94,18 @@
                 android:id="@+id/radiomale"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="rbClick"
-                android:text="male"></RadioButton>
+                android:onClick="rbClickgender"
+                android:text="male">
+
+            </RadioButton>
 
             <RadioButton
                 android:id="@+id/radiofemale"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="rbClick"
-                android:text="female"></RadioButton>
+                android:onClick="rbClickgender"
+                android:text="female">
+            </RadioButton>
         </RadioGroup>
     </LinearLayout>
     <androidx.legacy.widget.Space
@@ -127,7 +130,6 @@
             android:id="@+id/etdob"
             android:layout_width="186dp"
             android:layout_height="wrap_content">
-
         </EditText>
     </LinearLayout>
 

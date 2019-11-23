@@ -29,11 +29,12 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class EditprofileFragment extends Fragment {
+public class EditprofileFragment extends Fragment
+{
     String checkEmail,uEmail,uName,uphonenumber,uspinnerbg,uspinnercity,upassword,gen,dob;
     DatePickerDialog.OnDateSetListener mDateSetListner;
     RadioButton gender;
-    String donor;
+    RadioButton donor;
     RadioGroup radioGroup;
     Spinner spinnerbg,spinnercity;
      EditText etnameedit,etpassword,etphonenumber,etdob;
@@ -47,19 +48,16 @@ public class EditprofileFragment extends Fragment {
     FirebaseDatabase firebaseDatabase;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
-                                 ViewGroup container, Bundle savedInstanceState) {
+                                 ViewGroup container, Bundle savedInstanceState)
+    {
          v = inflater.inflate(R.layout.fragment_editprofile, null);
-
-
-
-
          etnameedit = v.findViewById(R.id.etname);
          etpassword = v.findViewById(R.id.etpassword);
          tvemailid = v.findViewById(R.id.tvemailid);
          etphonenumber = v.findViewById(R.id.etphonenumber);
          spinnerbg = v.findViewById(R.id.spinnerbgedit);
          spinnercity  =v.findViewById(R.id.spinnercityedit);
-         radioGroup = v.findViewById(R.id.radiogroup);
+         radioGroup = v.findViewById(R.id.radiogroup12);
          bgname = v.findViewById(R.id.bgname);
          etdob = v.findViewById(R.id.etdob);
          cityname = v.findViewById(R.id.cityname);
@@ -73,7 +71,8 @@ public class EditprofileFragment extends Fragment {
         checkEmail = user.getEmail();
 
 
-        ValueEventListener userListener = new ValueEventListener() {
+        ValueEventListener userListener = new ValueEventListener()
+        {
 
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot)
@@ -98,10 +97,6 @@ public class EditprofileFragment extends Fragment {
                     }
 
                 }
-
-
-
-
                 etnameedit.setText(uName);
                 tvemailid.setText(uEmail);
                 etpassword.setText(upassword);
@@ -110,11 +105,7 @@ public class EditprofileFragment extends Fragment {
                 cityname.setText(uspinnercity);
                 tvgender.setText(gen);
                 etdob.setText(dob);
-
-
                 //now for the spinner
-
-
                 //spinner layout for blood group
 
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(),R.array.bloodgroup, android.R.layout.simple_spinner_item);
@@ -136,9 +127,6 @@ public class EditprofileFragment extends Fragment {
                 });
 
                 //spinner layout for city
-
-
-
                 ArrayAdapter<CharSequence> adapter1  = ArrayAdapter.createFromResource(getActivity(),R.array.cities,android.R.layout.simple_spinner_item);
                 adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinnercity.setAdapter(adapter1);
@@ -161,18 +149,18 @@ public class EditprofileFragment extends Fragment {
             {
             }
 
-            public void rbClickdonor(View view)
-            {
-                int radioid = radioGroup.getCheckedRadioButtonId();
-                //blood donor status
-               /* donor = v.findViewById(radioid);*/
-            }
+
         };
         usrRef.addListenerForSingleValueEvent(userListener);
-        return v;
-    }
 
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
+        return v;
+
+    }
+    public void rbClickgender(View view)
+    {
+        int radioid = radioGroup.getCheckedRadioButtonId();
+        //blood donor status
+        donor = (RadioButton)v.findViewById(radioid);
+        tvgender.setText(donor.getText().toString());
     }
 }

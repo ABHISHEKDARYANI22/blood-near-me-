@@ -97,6 +97,7 @@ public class ReceiverFragment extends Fragment
              
                 // for data retrival
                 /* checkEmail = user.getEmail()*/
+                final ProgressDialog pd = ProgressDialog.show(getActivity(), "Searching", "Hang on", true);
                 DatabaseReference usrRef=myreff.child("users");
                 String donors[] = {};
                 arrayList = new ArrayList<>(Arrays.asList(donors));
@@ -128,6 +129,7 @@ public class ReceiverFragment extends Fragment
                                         String uEmail = ds.child("emailid").getValue(String.class);
                                         arrayList.add(uEmail);
                                         arrayAdapter.notifyDataSetChanged();
+                                        pd.dismiss();
 
                                     }
                                 }
@@ -139,6 +141,7 @@ public class ReceiverFragment extends Fragment
                     public void onCancelled(@NonNull DatabaseError databaseError)
                     {
                         Toast.makeText(getActivity(), "not working", Toast.LENGTH_SHORT).show();
+                        pd.dismiss();
 
                     }
                 };

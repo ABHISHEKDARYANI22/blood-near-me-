@@ -50,8 +50,10 @@ public class registration extends Activity implements View.OnClickListener, Adap
     private RadioGroup radioGroup,radioGroupdonor;
     private Spinner spinner,spinnercity;
     private String blood,city;
+    private int yearyear;
    @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+   {
         super.onCreate(savedInstanceState);
        setContentView(R.layout.registration);
        firebaseAuth = FirebaseAuth.getInstance();
@@ -72,11 +74,11 @@ public class registration extends Activity implements View.OnClickListener, Adap
            @Override
            public void onClick(View v) {
                Calendar c  = Calendar.getInstance();
-               int year  = c.get(Calendar.YEAR);
+                yearyear  = c.get(Calendar.YEAR);
                int month = c.get(Calendar.MONTH);
                int day  = c.get(Calendar.DAY_OF_MONTH);
 
-               DatePickerDialog dialog  = new DatePickerDialog(registration.this,android.R.style.Theme_DeviceDefault_Light,mDateSetListner,year,month,day);
+               DatePickerDialog dialog  = new DatePickerDialog(registration.this,android.R.style.Theme_DeviceDefault_Light,mDateSetListner,yearyear,month,day);
                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.WHITE));
                dialog.show();
            }
@@ -86,7 +88,14 @@ public class registration extends Activity implements View.OnClickListener, Adap
             public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
                month = month +1 ;
                 String date  = month+"/"+dayOfMonth+"/"+year;
-                etdob.setText(date);
+                if (yearyear-year>=18){
+                    etdob.setText(date);
+                }
+                else
+                {
+                    etdob.setError("age should be more than 18");
+                }
+
             }
         };
 
