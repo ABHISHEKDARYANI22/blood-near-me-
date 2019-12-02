@@ -27,17 +27,20 @@
         <item>AB-</item>
     </string-array>
     <string-array name="cities">
-        <item>bhubaneswar</item>
-        <item>cuttack</item>
-        <item>rourkela</item>
-        <item>berhampur</item>
-        <item>sambalpur</item>
-        <item>puri</item>
-        <item>balasore</item>
-        <item>bahadark</item>
-        <item>baripada</item>
-        <item>balangir</item>
+        <item>BHUBANESWAR</item>
+        <item>CUTTACK</item>
+        <item>ROURKELA</item>
+        <item>BERHAMPUR</item>
+        <item>SAMBALPUR</item>
+        <item>PURI</item>
+        <item>BALASORE</item>
+        <item>BAHADRAK</item>
+        <item>BARIPADA</item>
+        <item>BALANGIR</item>
 
     </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

@@ -1,5 +1,6 @@
 package com.example.bloodnearme2;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,6 +27,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class DonorFragment extends Fragment {
+
      String  uEmail,uStatus,id;
      String checkEmail="";
     Switch switchname;
@@ -48,7 +50,7 @@ public class DonorFragment extends Fragment {
         assert user != null;
         final DatabaseReference usrRef=myreff.child("users");
         checkEmail = user.getEmail();
-
+        final ProgressDialog pd = ProgressDialog.show(getActivity(), "", "Wait", true);
         ValueEventListener userListener = new ValueEventListener()
         {
             @Override
@@ -78,11 +80,13 @@ public class DonorFragment extends Fragment {
                         {
                             switchname.setChecked(true);
                             Toast.makeText(getActivity(), "YOU ARE A DONOR", Toast.LENGTH_SHORT).show();
+                            pd.dismiss();
                         }
                         if (uStatus.equals("no"))
                         {
                             switchname.setChecked(false);
                             Toast.makeText(getActivity(), "YOU ARE NOT A DONOR", Toast.LENGTH_SHORT).show();
+                            pd.dismiss();
 
                         }
                     }
@@ -116,6 +120,7 @@ public class DonorFragment extends Fragment {
                        u.setGender(gender);
                        u.setPassword(password);
                        u.setId(id);
+
                    Toast.makeText(getActivity(), "CONGRATULATIONS.!! YOU ARE A DONOR", Toast.LENGTH_SHORT).show();
                }
                if (isChecked==false)
@@ -130,6 +135,7 @@ public class DonorFragment extends Fragment {
                    u.setGender(gender);
                    u.setPassword(password);
                    u.setId(id);
+
                    Toast.makeText(getActivity(), "NOW YOU ARE NOT A DONOR", Toast.LENGTH_SHORT).show();
                }
                 usrRef.child(id).setValue(u);

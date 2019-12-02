@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:background="@color/mainbackground"
+    tools:context=".aboutusFragment">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <androidx.legacy.widget.Space
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            ></androidx.legacy.widget.Space>
+        <pl.droidsonroids.gif.GifImageView
+        android:layout_width="wrap_content"
+        android:layout_height="170dp"
+        android:src="@drawable/blood"
+        ></pl.droidsonroids.gif.GifImageView>
+        <androidx.legacy.widget.Space
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            ></androidx.legacy.widget.Space>
+
+        <androidx.legacy.widget.Space
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            ></androidx.legacy.widget.Space>
+
+
+        <TextView
+            android:layout_width="347dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/mainbackground"
+            android:textStyle="italic"
+            android:background="@color/colorPrimaryDark"
+            android:text="The BLOOD NEAR ME is such an application which will help to connect blood donor and blood seeker. When there is a new user the App collects the data of the user and stores it in the online database. An existing user can login directly through their registered email-ids.To be a member, one has to fill the registration form and provide the necessary details.RECEIVER: Receiver can request donors by selecting their names from the database and can contact them via Email/Phone numbers. DONOR: Interested donors can accept the request and can provide consent to donate blood."
+            android:textSize="20dp"></TextView>
+        <androidx.legacy.widget.Space
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            ></androidx.legacy.widget.Space>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="CREATORS"
+            android:textColor="@color/colorAccentDark"
+            android:textStyle="bold"
+            android:textSize="20dp"
+
+            ></TextView>
+        <androidx.legacy.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            ></androidx.legacy.widget.Space>
+        <TextView
+            android:layout_width="358dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:text="ABHISHEK DARYANI                                       1641012218"
+            android:textSize="20dp"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"></TextView>
+
+        <TextView
+            android:textColor="@color/colorAccent"
+            android:layout_width="358dp"
+            android:layout_height="match_parent"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:textSize="20dp"
+            android:text="TRUPTI PATNAIK                                           1641012284"
+            ></TextView>
+        <TextView
+            android:textColor="@color/colorAccent"
+            android:layout_width="358dp"
+            android:layout_height="match_parent"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:textSize="20dp"
+            android:text="ARADHANA SATPATHY                                 1641012153"
+            ></TextView>
+
+        <TextView
+            android:textColor="@color/colorAccent"
+            android:layout_width="358dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:text="AYUSHI KAR                                                     1641012333"
+            android:textSize="20dp"
+            android:textStyle="bold"></TextView>
+
+<androidx.legacy.widget.Space
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    ></androidx.legacy.widget.Space>
+
+        <ImageView
+            android:id="@+id/githubimage"
+            android:layout_width="253dp"
+            android:layout_gravity="center"
+            android:layout_height="87dp"
+            android:src="@drawable/githublogo"></ImageView>
+    </LinearLayout>
+
+
+
+
+
+</ScrollView>

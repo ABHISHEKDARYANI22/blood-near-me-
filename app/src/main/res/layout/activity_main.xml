@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/mainbackground"
+
+
     tools:context=".MainActivity"
 
-        android:background="#ffffff">
+       >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical"
+                >
         <Space
             android:layout_width="match_parent"
             android:layout_height="90dp" />
@@ -21,7 +30,7 @@
             android:text="BLOOD NEAR ME"
             android:fontFamily="serif-monospace"
 
-            android:textColor="#04AD96"
+            android:textColor="@color/colorAccentDark"
             android:textSize="40dp" />
 
 
@@ -31,7 +40,7 @@
         <pl.droidsonroids.gif.GifImageView
             android:layout_width="wrap_content"
             android:layout_height="170dp"
-            android:src="@drawable/gif"
+            android:src="@drawable/blood"
             ></pl.droidsonroids.gif.GifImageView>
         <Space
             android:layout_width="match_parent"
@@ -42,7 +51,9 @@
             android:layout_width="330dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:background="#ffffff"
+            android:background="@drawable/edit_round"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
             android:drawableLeft="@drawable/email"
             android:ems="10"
             android:hint="EMAIL ID"
@@ -59,8 +70,10 @@
             android:layout_width="330dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:background="#ffffff"
+            android:background="@drawable/edit_round"
+            android:paddingLeft="10dp"
             android:ems="10"
+            android:paddingRight="10dp"
             android:inputType="textPassword"
             android:drawableLeft="@drawable/lock"
             android:hint="PASSWORD"
@@ -74,7 +87,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textColor="#ffffff"
-            android:background="@color/colorPrimaryDark"
+            android:background="@drawable/buttonround"
+            android:paddingLeft="10dp"
             android:text="LOG IN" />
         <Space
             android:layout_width="match_parent"
@@ -85,7 +99,23 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="NOT YET? SIGN UP.!"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="@color/colorAccentDark"
             android:textSize="20dp" />
+        <androidx.legacy.widget.Space
+            android:layout_width="wrap_content"
+            android:layout_height="10dp"
+                ></androidx.legacy.widget.Space>
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/tvforgotpassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="FORGOT PASSWORD"
+            android:textColor="@color/colorAccentDark"
+            android:textSize="20dp"></TextView>
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp" />
+        </LinearLayout>
+</ScrollView>

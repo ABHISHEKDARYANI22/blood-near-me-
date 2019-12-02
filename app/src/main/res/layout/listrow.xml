@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/mainbackground">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="246dp"
+        android:orientation="horizontal"
+        android:background="@drawable/edit_round">
+
+        <androidx.legacy.widget.Space
+            android:layout_width="20dp"
+            android:layout_height="match_parent"></androidx.legacy.widget.Space>
+
+        <LinearLayout
+            android:layout_width="392dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.legacy.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp"></androidx.legacy.widget.Space>
+
+            <TextView
+                android:id="@+id/displayname"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:drawableLeft="@drawable/name"
+                android:text="NAME"
+                android:textColor="#000000"
+                android:textSize="25dp"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/displaybg"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:drawableLeft="@drawable/bloodgroup"
+                android:text="BLOOD GROUP"
+                android:textColor="#000000"
+                android:textSize="25dp"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/displaydob"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:drawableLeft="@drawable/calender"
+                android:text="DOB"
+
+                android:textColor="#000000"
+                android:textSize="25dp"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/displayphone"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:drawableLeft="@drawable/phone"
+                android:text="PHONE "
+                android:textColor="#000000"
+                android:textSize="25dp"
+                android:textStyle="italic"></TextView>
+
+            <TextView
+                android:id="@+id/displayemail"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:drawableLeft="@drawable/email"
+                android:text="EMAIL ID"
+                android:textColor="#000000"
+                android:textSize="25dp"
+                android:textStyle="italic"></TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

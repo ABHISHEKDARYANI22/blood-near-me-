@@ -17,15 +17,34 @@
             android:id="@+id/nav_editprofile"
             android:icon="@drawable/ic_menu_manage"
             android:title="EDIT PROFILE" />
+
+        <item
+            android:id="@+id/nav_update_password"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="UPDATE PASSWORD" />
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="ACTIONS">
         <menu>
             <item
                 android:id="@+id/nav_logout"
                 android:icon="@drawable/ic_menu_share"
                 android:title="LOGOUT" />
-
+            <item android:id="@+id/nav_delete"
+                android:icon="@drawable/calender"
+                android:title="DELETE ACCOUNT"></item>
+        </menu>
+    </item>
+    <item android:title="COMMUNICATE">
+        <menu>
+            <item
+                android:id="@+id/nav_aboutus"
+                android:icon="@drawable/ic_menu_share"
+                android:title="ABOUT US" />
+            <item
+                android:id="@+id/nav_usercount"
+                android:icon="@drawable/ic_menu_share"
+                android:title="USER COUNT" />
         </menu>
     </item>
 

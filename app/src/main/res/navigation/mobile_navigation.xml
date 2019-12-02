@@ -23,11 +23,30 @@
         android:name="com.example.bloodnearme2.EditprofileFragment"
         android:label="EDIT PROFILE"
         tools:layout="@layout/fragment_editprofile" />
-
+    <fragment
+        android:id="@+id/nav_update_password"
+        android:name="com.example.bloodnearme2.changepassword"
+        android:label="UPDATE PASSWORD"
+        tools:layout="@layout/fragment_changepassword" />
 
     <fragment
         android:id="@+id/nav_logout"
         android:name="com.example.bloodnearme2.LogoutFragment"
         android:label="LOGOUT"
         tools:layout="@layout/fragment_logout" />
+    <fragment
+        android:id="@+id/nav_delete"
+        android:name="com.example.bloodnearme2.DeleteAccountFragment"
+        android:label="LOGOUT"
+        tools:layout="@layout/fragment_delete" />
+    <fragment
+        android:id="@+id/nav_aboutus"
+        android:name="com.example.bloodnearme2.aboutusFragment"
+        android:label="ABOUT US"
+        tools:layout="@layout/fragment_aboutus" />
+    <fragment
+        android:id="@+id/nav_usercount"
+        android:name="com.example.bloodnearme2.usercount"
+        android:label="USER COUNT"
+        tools:layout="@layout/fragment_usercount" />
 </navigation>

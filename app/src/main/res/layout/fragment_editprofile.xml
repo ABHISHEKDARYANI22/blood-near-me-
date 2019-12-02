@@ -1,158 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/mainbackground"
     android:orientation="vertical">
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
     <androidx.legacy.widget.Space
         android:layout_width="wrap_content"
-        android:layout_height="40dp"></androidx.legacy.widget.Space>
+        android:layout_height="70dp"></androidx.legacy.widget.Space>
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="297dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:textStyle="bold"
         android:fontFamily="sans-serif"
         android:text="UPDATE DETAILS"
         android:textColor="@color/colorPrimary"
         android:textSize="30dp" />
 
+
     <androidx.legacy.widget.Space
         android:layout_width="wrap_content"
         android:layout_height="20dp"></androidx.legacy.widget.Space>
 
 
-    <EditText
-        android:id="@+id/etname"
-        android:layout_width="330dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="NAME"
-        android:layout_gravity="center"
-        android:inputType="textPersonName"
-        />
+
+
     <androidx.legacy.widget.Space
         android:layout_width="wrap_content"
-        android:layout_height="20dp"></androidx.legacy.widget.Space>
+        android:layout_height="30dp"></androidx.legacy.widget.Space>
 
-    <TextView
-        android:id="@+id/tvemailid"
-        android:layout_width="330dp"
-        android:layout_height="37dp"
-        android:layout_gravity="center"
-        android:ems="10"
-        android:textSize="20dp"
-        android:hint="EMAIL ID"
-        android:inputType="textEmailAddress" />
+        <TextView
+            android:id="@+id/tvemailid"
+            android:layout_width="330dp"
+            android:background="@drawable/edit_round"
+            android:paddingLeft="10dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableLeft="@drawable/email"
+            android:ems="10"
+            android:hint="EMAIL ID"
+            android:inputType="textEmailAddress"
+            android:textSize="20dp"
+            android:textStyle="italic" />
     <androidx.legacy.widget.Space
-        android:layout_width="wrap_content"
-        android:layout_height="20dp"></androidx.legacy.widget.Space>
-
-    <EditText
-        android:id="@+id/etphonenumber"
-        android:layout_width="330dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:layout_gravity="center"
-        android:hint="PHONE NUMBER"
-        android:inputType="phone" />
-    <androidx.legacy.widget.Space
-        android:layout_width="wrap_content"
-        android:layout_height="20dp"></androidx.legacy.widget.Space>
-
+        android:layout_width="match_parent"
+        android:layout_height="30dp"></androidx.legacy.widget.Space>
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="329dp"
         android:layout_height="wrap_content"
+
+        android:layout_gravity="center"
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="90dp"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="45dp"
-            android:text="GENDER"></TextView>
-
-        <androidx.legacy.widget.Space
-            android:layout_width="40dp"
-            android:layout_height="match_parent"></androidx.legacy.widget.Space>
-        <TextView
-            android:id="@+id/tvgender"
-            android:layout_width="wrap_content"
+            android:layout_width="57dp"
             android:layout_height="wrap_content"
-            android:text="gender"
-            ></TextView>
-        <androidx.legacy.widget.Space
-            android:layout_width="40dp"
-            android:layout_height="match_parent"></androidx.legacy.widget.Space>
-        <RadioGroup
-            android:id="@+id/radiogroup12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:text="BLOOD GROUP"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15dp"></TextView>
 
-            <RadioButton
-                android:id="@+id/radiomale"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="rbClickgender"
-                android:text="male">
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="wrap_content"></Space>
 
-            </RadioButton>
-
-            <RadioButton
-                android:id="@+id/radiofemale"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="rbClickgender"
-                android:text="female">
-            </RadioButton>
-        </RadioGroup>
-    </LinearLayout>
-    <androidx.legacy.widget.Space
-        android:layout_width="wrap_content"
-        android:layout_height="20dp"></androidx.legacy.widget.Space>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="45dp"
-            android:text="DATE OF BIRTH"></TextView>
-
-        <androidx.legacy.widget.Space
-            android:layout_width="40dp"
-            android:layout_height="wrap_content"></androidx.legacy.widget.Space>
-
-        <EditText
-            android:id="@+id/etdob"
-            android:layout_width="186dp"
-            android:layout_height="wrap_content">
-        </EditText>
-    </LinearLayout>
-
-    <androidx.legacy.widget.Space
-        android:layout_width="match_parent"
-        android:layout_height="20dp"></androidx.legacy.widget.Space>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginLeft="43dp">
         <TextView
             android:id="@+id/bgname"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="blood group"></TextView>
-        <Spinner
-            android:id="@+id/spinnerbgedit"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content">
-
-        </Spinner>
+            android:layout_width="53dp"
+            android:layout_height="45dp"></TextView>
 
         <androidx.legacy.widget.Space
             android:layout_width="20dp"
@@ -161,53 +85,156 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CITY"></TextView>
+            android:text="CITY"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15dp"></TextView>
+
         <androidx.legacy.widget.Space
             android:layout_width="20dp"
             android:layout_height="wrap_content"></androidx.legacy.widget.Space>
 
         <TextView
             android:id="@+id/cityname"
-            android:layout_width="103dp"
-            android:layout_height="match_parent"
+            android:layout_width="132dp"
+            android:layout_height="45dp"
+
+            android:textStyle="italic"
             android:text="cityname"></TextView>
 
-        <Spinner
-            android:id="@+id/spinnercityedit"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content">
-
-        </Spinner>
     </LinearLayout>
+    <androidx.legacy.widget.Space
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"></androidx.legacy.widget.Space>
+    <EditText
+        android:id="@+id/etname"
+        android:layout_width="330dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:background="@drawable/edit_round"
+        android:paddingLeft="10dp"
+        android:textStyle="italic"
+        android:drawableLeft="@drawable/name"
+        android:hint="NAME"
+        android:layout_gravity="center"
+        android:inputType="textPersonName"
+        />
+
+
+    <androidx.legacy.widget.Space
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"></androidx.legacy.widget.Space>
+
+
+
+            <EditText
+                android:id="@+id/etphonenumber"
+                android:layout_width="330dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:ems="10"
+                android:background="@drawable/edit_round"
+                android:paddingLeft="10dp"
+                android:textStyle="italic"
+                android:drawableLeft="@drawable/phone"
+                android:hint="PHONE NUMBER"
+                android:inputType="phone" />
 
 
 
     <androidx.legacy.widget.Space
         android:layout_width="wrap_content"
-        android:layout_height="20dp"></androidx.legacy.widget.Space>
-    <EditText
-        android:id="@+id/etpassword"
+        android:layout_height="30dp"
+        ></androidx.legacy.widget.Space>
+
+
+    <LinearLayout
+        android:layout_width="326dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:textColor="@color/colorPrimary"
+            android:text="GENDER"></TextView>
+
+        <androidx.legacy.widget.Space
+            android:layout_width="40dp"
+            android:layout_height="match_parent"></androidx.legacy.widget.Space>
+
+        <TextView
+            android:id="@+id/tvgender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:text="gender"></TextView>
+
+        <androidx.legacy.widget.Space
+            android:layout_width="40dp"
+            android:layout_height="match_parent"></androidx.legacy.widget.Space>
+
+        <Switch
+            android:id="@+id/genderswitch"
+            android:layout_width="79dp"
+            android:layout_height="wrap_content"></Switch>
+    </LinearLayout>
+    <androidx.legacy.widget.Space
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"></androidx.legacy.widget.Space>
+
+    <LinearLayout
         android:layout_width="330dp"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        android:hint="ENTER PASSWORD"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:text="DATE OF BIRTH"></TextView>
+
+        <androidx.legacy.widget.Space
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"></androidx.legacy.widget.Space>
+
+        <EditText
+            android:id="@+id/etdob"
+            android:layout_width="159dp"
+            android:layout_height="wrap_content"
+            android:textStyle="italic"
+            android:background="@drawable/edit_round"
+            android:paddingLeft="10dp"
+            android:hint="mm/dd/yyyy"></EditText>
+
+        <Button
+            android:id="@+id/btnCalender"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:drawableLeft="@drawable/calender"
+            android:src="@drawable/calender">
+
+        </Button>
+    </LinearLayout>
+
     <androidx.legacy.widget.Space
-        android:layout_width="wrap_content"
-        android:layout_height="20dp"></androidx.legacy.widget.Space>
+        android:layout_width="match_parent"
+        android:layout_height="30dp"></androidx.legacy.widget.Space>
+
 
     <androidx.legacy.widget.Space
         android:layout_width="wrap_content"
-        android:layout_height="20dp"></androidx.legacy.widget.Space>
+        android:layout_height="40dp"></androidx.legacy.widget.Space>
 
     <Button
-        android:id="@+id/btnsignup"
+        android:id="@+id/btnupdate"
         android:layout_width="211dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        android:textColor="@color/mainbackground"
+        android:background="@drawable/buttonround"
         android:text="UPDATE DETAILS" />
+    </LinearLayout>
 
-
-</LinearLayout>
+</ScrollView>

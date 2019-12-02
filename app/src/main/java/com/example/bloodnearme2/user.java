@@ -25,7 +25,11 @@ public class user {
        this.city  =city;
        this.donorstatus = donorstatus;
 
+
     }
+
+
+
     public user()
     {
 

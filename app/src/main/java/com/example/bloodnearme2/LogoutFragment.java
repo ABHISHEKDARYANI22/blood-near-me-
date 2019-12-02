@@ -18,14 +18,12 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.bloodnearme2.R;
 
-public class LogoutFragment extends Fragment {
-
-
+public class LogoutFragment extends Fragment
+{
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View v  =  inflater.inflate(R.layout.fragment_receiver,null);
-
         return v;
 
     }
@@ -48,7 +46,7 @@ public class LogoutFragment extends Fragment {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.cancel();
-               Intent i = new Intent(getActivity(),ReceiverFragment.class);
+
             }
         });
         AlertDialog alertDialog = builder.create();

@@ -47,6 +47,7 @@ public class registration extends Activity implements View.OnClickListener, Adap
     private EditText etdob;
     private DatePickerDialog.OnDateSetListener mDateSetListner;
     private RadioButton gender,donor;
+    Button btncalenderregister;
     private RadioGroup radioGroup,radioGroupdonor;
     private Spinner spinner,spinnercity;
     private String blood,city;
@@ -65,12 +66,13 @@ public class registration extends Activity implements View.OnClickListener, Adap
         etphonenumber = (EditText)findViewById(R.id.etphonenumber);
         btnSignUp = (Button)findViewById(R.id.btnsignup);
         etdob = (EditText)findViewById(R.id.etdob);
+        btncalenderregister = findViewById(R.id.btnCalenderregister);
        databaseusers = FirebaseDatabase.getInstance().getReference("users");
 
        radioGroup  = (RadioGroup)findViewById(R.id.radiogroup);
         radioGroupdonor  =(RadioGroup)findViewById(R.id.radiogroupdonor);
        btnSignUp.setOnClickListener(this);
-       etdob.setOnClickListener(new View.OnClickListener() {
+       btncalenderregister.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
                Calendar c  = Calendar.getInstance();
@@ -90,6 +92,7 @@ public class registration extends Activity implements View.OnClickListener, Adap
                 String date  = month+"/"+dayOfMonth+"/"+year;
                 if (yearyear-year>=18){
                     etdob.setText(date);
+                    etdob.setError(null);
                 }
                 else
                 {
@@ -98,8 +101,6 @@ public class registration extends Activity implements View.OnClickListener, Adap
 
             }
         };
-
-
         //spinner layout for blood group
        spinner = findViewById(R.id.spinner);
        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.bloodgroup, android.R.layout.simple_spinner_item);
@@ -156,14 +157,14 @@ public class registration extends Activity implements View.OnClickListener, Adap
     public void registerUser() {
         String emailid = etemailid.getText().toString().trim();
         String password = etpassword.getText().toString().trim();
-        String name  = etname.getText().toString().trim();
+        String name = etname.getText().toString().trim();
         String passwordagain = etpasswordagain.getText().toString().trim();
-        String phonenumber  = etphonenumber.getText().toString().trim();
+        String phonenumber = etphonenumber.getText().toString().trim();
         String malefemale = gender.getText().toString();
-       String dob  = etdob.getText().toString();
-        String bloodgroup  = blood;
+        String dob = etdob.getText().toString();
+        String bloodgroup = blood;
         String city1 = city;
-        String donordonor =  donor.getText().toString();
+        String donordonor = donor.getText().toString();
 
         if (TextUtils.isEmpty(emailid)) {
             Toast.makeText(this, "Please enter the Email Id", Toast.LENGTH_SHORT).show();
@@ -189,7 +190,7 @@ public class registration extends Activity implements View.OnClickListener, Adap
             Toast.makeText(this, "Please enter the gender", Toast.LENGTH_SHORT).show();
             return;
         }
-       if (TextUtils.isEmpty(dob)) {
+        if (TextUtils.isEmpty(dob)) {
             Toast.makeText(this, "Please enter the Date of Birth", Toast.LENGTH_SHORT).show();
             return;
         }
@@ -202,19 +203,18 @@ public class registration extends Activity implements View.OnClickListener, Adap
             Toast.makeText(this, "Please enter the Blood Group", Toast.LENGTH_SHORT).show();
             return;
         }
-        if (!password.equals(passwordagain))
-        {
+        if (!password.equals(passwordagain)) {
             Toast.makeText(this, "Both passwords are not same", Toast.LENGTH_SHORT).show();
             return;
         }
-        if (TextUtils.isEmpty(donordonor))
-        {
+        if (TextUtils.isEmpty(donordonor)) {
             Toast.makeText(this, "Please enter the donor preference", Toast.LENGTH_SHORT).show();
             return;
         }
 
         //if credentials are ok
         //then create account
+
 
         progressDialog.setMessage("Registering User...");
         progressDialog.show();
@@ -227,7 +227,7 @@ public class registration extends Activity implements View.OnClickListener, Adap
                     adduser();
                     progressDialog.cancel();
                     Toast.makeText(registration.this, "Registered Successfully....", Toast.LENGTH_SHORT).show();
-                    Intent i = new Intent(registration.this,MainActivity.class);
+                    Intent i = new Intent(registration.this, MainActivity.class);
                     startActivity(i);
                 } else {
                     progressDialog.cancel();
@@ -237,11 +237,19 @@ public class registration extends Activity implements View.OnClickListener, Adap
             }
         });
     }
+
+
     public void onClick(View view)
     {
         if(view == btnSignUp)
         {
-            registerUser();
+            try {
+                registerUser();
+            }
+            catch (Exception e)
+            {
+                Toast.makeText(this, "ENTER THE DETAILS", Toast.LENGTH_SHORT).show();
+            }
         }
     }
     private void adduser()

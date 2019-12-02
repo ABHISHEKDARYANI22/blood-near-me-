@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/mainbackground"
     android:orientation="vertical" >
     <androidx.legacy.widget.Space
         android:layout_width="wrap_content"
@@ -20,7 +21,7 @@
         <Spinner
             android:id="@+id/spinnercity"
             android:layout_width="160dp"
-            android:layout_height="wrap_content"></Spinner>
+            android:layout_height="30dp"></Spinner>
 
         <androidx.legacy.widget.Space
             android:layout_width="20dp"
@@ -29,7 +30,7 @@
         <Spinner
             android:id="@+id/spinnerbg"
             android:layout_width="92dp"
-            android:layout_height="wrap_content">
+            android:layout_height="30dp">
 
         </Spinner>
 
@@ -39,6 +40,8 @@
 
         <Button
             android:id="@+id/search"
+            android:textColor="@color/mainbackground"
+            android:background="@drawable/buttonround"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="13dp"
@@ -52,18 +55,24 @@
         android:layout_width="wrap_content"
         android:layout_height="20dp"></androidx.legacy.widget.Space>
 
-    <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"></LinearLayout>
 
-            <ListView
-                android:id="@+id/donorlist"
-                android:layout_width="match_parent"
-                android:layout_height="658dp" />
-        </LinearLayout>
-    </ScrollView>
+
+    <ListView
+        android:id="@+id/donorlist1"
+        android:layout_width="385dp"
+        android:layout_height="712dp"
+        android:layout_gravity="center"
+        android:background="@color/mainbackground"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" />
+
+
+    <androidx.legacy.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        ></androidx.legacy.widget.Space>
 
 </LinearLayout>

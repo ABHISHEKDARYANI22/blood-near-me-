@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private  EditText eteemailid,etpassword;
     private Button btnlogin;
-    private TextView tvsignup;
+    private TextView tvsignup,tvforgotpassword;
     ProgressDialog progressDialog;
     FirebaseAuth firebaseAuth;
 
@@ -41,12 +41,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(i);*/
 
         }
+        tvforgotpassword = (TextView)findViewById(R.id.tvforgotpassword) ;
         eteemailid = (EditText)findViewById(R.id.etemailid);
         etpassword = (EditText)findViewById(R.id.etpassword);
         btnlogin = (Button)findViewById(R.id.btnlogin);
         tvsignup = (TextView)findViewById(R.id.tvsignup);
         btnlogin.setOnClickListener(this);
         tvsignup.setOnClickListener(this);
+        tvforgotpassword.setOnClickListener(this);
     }
 
 
@@ -96,8 +98,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             {
                 Intent intent = new Intent(MainActivity.this,registration.class);
                 startActivity(intent);
-
-
+            }
+            if (view == tvforgotpassword)
+            {
+                Intent intent = new Intent(MainActivity.this,forgotpassword.class);
+                startActivity(intent);
             }
     }
 

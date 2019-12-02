@@ -1,5 +1,6 @@
 package com.example.bloodnearme2;
 
+import android.content.ClipData;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -95,7 +96,7 @@ public class navigation extends AppCompatActivity {
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                R.id.nav_donor, R.id.nav_receiver,
-                R.id.nav_editprofile, R.id.nav_logout)
+                R.id.nav_editprofile,R.id.nav_update_password,R.id.nav_logout,R.id.nav_delete,R.id.nav_aboutus,R.id.nav_usercount)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
